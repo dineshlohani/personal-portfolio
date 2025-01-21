@@ -7,6 +7,7 @@ import sifaris from "../../Assets/Projects/sifaris.png";
 import bibaabo from "../../Assets/Projects/bibaabo.png";
 import diabetes from "../../Assets/Projects/diabetes.png";
 import library from "../../Assets/Projects/library.png";
+import shinjiru from "../../Assets/Projects/Shinjiru.png";
 
 function Projects() {
   return (
@@ -73,11 +74,26 @@ function Projects() {
               imgPath={kapada}
               isBlog={false}
               title="Purano kapada"
-              description="PuranoKapada, a digital platform that revolutionizes the way old clothes are bought and sold. Our website bridges the gap between sellers looking to give their pre-loved clothes a second life and buyers seeking affordable, sustainable options.
-
+              description="PuranoKapada is a React-based digital platform that transforms how old clothes are bought and sold. It connects sellers giving their pre-loved clothes a second life with buyers seeking affordable, sustainable options. The platform promotes circular fashion, reducing waste and encouraging eco-friendly choices. With secure transactions and user-friendly features, it ensures a 
+              seamless experience. PuranoKapada makes sustainable fashion easy, accessible, and impactful.
 "
               ghLink="https://github.com/dineshlohani/Purano-kapada-react"
               demoLink="#"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={shinjiru}
+              isBlog={false}
+              title="Consultancy Websites"
+              description="The Shinjiru Educational Consultancy website is a Laravel-based platform designed to assist 
+              students and professionals aiming to study and work in Japan. It offers services like admissions assistance, test preparation, and interview coaching. The site features a user-friendly interface with detailed information and an efficient inquiry system. Built for security and scalability, it ensures a seamless user experience. This platform 
+              connects aspirations with opportunities, making dreams a reality.
+
+"
+              ghLink="#"
+              demoLink="https://www.shinjirueducational.com"
             />
           </Col>
         </Row>
