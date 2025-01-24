@@ -68,6 +68,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="follow me on github"
                 >
                   <AiFillGithub />
                 </a>
@@ -78,6 +79,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="follow me on twitter"
                 >
                   <AiOutlineTwitter />
                 </a>
@@ -88,6 +90,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="follow me on facebook"
                 >
                   <FaFacebook />
                 </a>
@@ -98,6 +101,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="follow me on linkedin"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -108,6 +112,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
+                  aria-label="follow me on instagram"
                 >
                   <AiFillInstagram />
                 </a>

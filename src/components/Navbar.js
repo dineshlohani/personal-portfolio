@@ -140,15 +140,16 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item className="fork-btn">
-                <Button
-                  href="https://github.com/dineshlohani/personal-portfolio.git"
-                  target="_blank"
-                  className="fork-btn-inner"
-                >
-                  <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                  <AiFillStar style={{ fontSize: "1.1em" }} />
-                </Button>
-              </Nav.Item>
+            <Button
+              href="https://github.com/dineshlohani/personal-portfolio.git"
+              target="_blank"
+              className="fork-btn-inner"
+              aria-label="View the GitHub repository of this portfolio"
+            >
+              <CgGitFork style={{ fontSize: "1.2em" }} />
+              <AiFillStar style={{ fontSize: "1.1em" }} />
+            </Button>
+          </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>

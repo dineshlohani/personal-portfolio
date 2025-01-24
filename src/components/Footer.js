@@ -27,6 +27,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View the GitHub"
               >
                 <AiFillGithub />
               </a>
@@ -37,6 +38,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="follow on facebook"
               >
                 <FaFacebook />
               </a>
@@ -47,6 +49,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="connect on Twitter"
               >
                 <AiOutlineTwitter />
               </a>
@@ -57,6 +60,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="connect on linkedin"
               >
                 <FaLinkedinIn />
               </a>
@@ -67,6 +71,7 @@ function Footer() {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="follow me on instagram"
               >
                 <AiFillInstagram />
               </a>
