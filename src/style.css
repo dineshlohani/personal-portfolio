@@ -403,6 +403,7 @@ button:focus {
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
+  color: #f9f7f7;
 }
 .footer-copywright {
   text-align: center !important;
@@ -738,4 +739,3 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
-
