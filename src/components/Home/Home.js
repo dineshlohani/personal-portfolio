@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogoWebp from "../../Assets/home-main.webp"; // Optimized WebP format
+import homeLogoFallback from "../../Assets/home-main.svg"; // Fallback SVG format
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
@@ -30,13 +31,18 @@ function Home() {
               </div>
             </Col>
 
+            {/* Optimized Image Section */}
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
+              <picture>
+                <source srcSet={homeLogoWebp} type="image/webp" />
+                <img
+                  src={homeLogoFallback}
+                  alt="home pic"
+                  className="img-fluid"
+                  style={{ maxHeight: "450px" }}
+                  loading="lazy" // Enable lazy loading
+                />
+              </picture>
             </Col>
           </Row>
         </Container>
