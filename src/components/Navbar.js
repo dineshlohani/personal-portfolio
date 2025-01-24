@@ -47,7 +47,7 @@ function NavBar() {
         />
         <meta
           property="og:title"
-          content="Dinesh Lohani - Personal Portfolio"
+          content="Dinesh Lohani - Personal Portfolio, Dinesh, Dinesh Lohani, Lohani"
         />
         <meta
           property="og:description"
