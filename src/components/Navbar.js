@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import myImg from "../Assets/avatar.png";
+import logo from "../Assets/logo.webp";
+import myImg from "../Assets/avatar.webp";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -140,16 +140,16 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item className="fork-btn">
-            <Button
-              href="https://github.com/dineshlohani/personal-portfolio.git"
-              target="_blank"
-              className="fork-btn-inner"
-              aria-label="View the GitHub repository of this portfolio"
-            >
-              <CgGitFork style={{ fontSize: "1.2em" }} />
-              <AiFillStar style={{ fontSize: "1.1em" }} />
-            </Button>
-          </Nav.Item>
+                <Button
+                  href="https://github.com/dineshlohani/personal-portfolio.git"
+                  target="_blank"
+                  className="fork-btn-inner"
+                  aria-label="View the GitHub repository of this portfolio"
+                >
+                  <CgGitFork style={{ fontSize: "1.2em" }} />
+                  <AiFillStar style={{ fontSize: "1.1em" }} />
+                </Button>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
