@@ -58,7 +58,7 @@ function Blog() {
           </Row>
         </div>
       ),
-      date: "Febrary 16, 2025"
+      date: "Febrary 16, 2024"
     },
     {
       id: 2,
@@ -124,7 +124,7 @@ function Blog() {
           </Row>
         </div>
       ),
-      date: "June 10, 2025"
+      date: "April 10, 2024"
     },
     {
       id: 3,
@@ -198,7 +198,7 @@ function Blog() {
           </Row>
         </div>
       ),
-      date: "July 5, 2025"
+      date: "July 5, 2024"
     },
     
       {
@@ -260,7 +260,7 @@ function Blog() {
             </Row>
           </div>
         ),
-        date: "August 15, 2025"
+        date: "August 15, 2024"
       },
       {
         id: 5,
@@ -347,7 +347,7 @@ function Blog() {
             </Row>
           </div>
         ),
-        date: "September 1, 2025"
+        date: "September 1, 2024"
       }
     
   ];
