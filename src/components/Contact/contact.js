@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Alert } from "react-bootstrap";
 import Particle from "../Particle";
-import contactImg from "../../Assets/contact.jpg"; // Add your contact image
+import contactImg from "../../Assets/contact.jpg";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -29,11 +29,10 @@ function Contact() {
       console.log("Form submitted:", formData);
       setIsSubmitting(false);
       setShowAlert(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: ""
-      });
+      setFormData(prev => ({
+        ...prev,
+        message: "" // Clear only the message field, keep name for potential future use
+      }));
       
       // Hide alert after 5 seconds
       setTimeout(() => setShowAlert(false), 5000);
@@ -58,11 +57,12 @@ function Contact() {
                 
                 {showAlert && (
                   <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-                    Thank you for your message! I'll get back to you soon.
+                    Thank you {formData.name} for your message! I'll get back to you soon.
                   </Alert>
                 )}
                 
                 <Form onSubmit={handleSubmit}>
+                  {/* Rest of the form remains the same */}
                   <Form.Group className="mb-3" controlId="formName">
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control 
