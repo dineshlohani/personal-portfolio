@@ -126,19 +126,19 @@ function Contact() {
               <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
                 <li style={{ padding: "8px 0" }}>
                   <i className="fas fa-envelope" style={{ marginRight: "10px", color: "purple" }}></i>
-                  <a href="mailto:dineshlohani333@gmail.com">dineshlohani333@gmail.com</a>
+                  <a href="mailto:dineshlohani333@gmail.com">E-Mail</a>
                 </li>
                 <li style={{ padding: "8px 0" }}>
                   <i className="fab fa-github" style={{ marginRight: "10px", color: "purple" }}></i>
-                  <a href="https://github.com/dineshlohani" target="_blank" rel="noopener noreferrer">github.com/dineshlohani</a>
+                  <a href="https://github.com/dineshlohani" target="_blank" rel="noopener noreferrer">Github</a>
                 </li>
                 <li style={{ padding: "8px 0" }}>
                   <i className="fab fa-linkedin" style={{ marginRight: "10px", color: "purple" }}></i>
-                  <a href="https://www.linkedin.com/in/dinesh-lohani-2f7og62i/" target="_blank" rel="noopener noreferrer">linkedin.com/in/dinesh-lohani-2f7og62i/</a>
+                  <a href="https://www.linkedin.com/in/dinesh-lohani-2f7og62i/" target="_blank" rel="noopener noreferrer">linkedin</a>
                 </li>
                 <li style={{ padding: "8px 0" }}>
                   <i className="fab fa-twitter" style={{ marginRight: "10px", color: "purple" }}></i>
-                  <a href="https://x.com/dineshlohani20" target="_blank" rel="noopener noreferrer">dineshlohani20</a>
+                  <a href="https://x.com/dineshlohani20" target="_blank" rel="noopener noreferrer">Twitter</a>
                 </li>
               </ul>
             </div>
