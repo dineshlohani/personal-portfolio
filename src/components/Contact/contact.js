@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Alert } from "react-bootstrap";
 import Particle from "../Particle";
 import contactImg from "../../Assets/contact.jpg";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
+  const [errors, setErrors] = useState({});
   const [showAlert, setShowAlert] = useState(false);
+  const [alertVariant, setAlertVariant] = useState("success");
+  const [alertMessage, setAlertMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Email validation regex
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,25 +29,80 @@ function Contact() {
       ...prev,
       [name]: value
     }));
+    
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: null
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+    
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      setIsSubmitting(false);
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+
+    const templateParams = {
+      from_name: formData.name,
+      user_name: formData.name,
+      user_email: formData.email,
+      message: formData.message
+    };
+
+    emailjs.send(
+      "service_fg210gr",
+      "template_y631q63",
+      templateParams,
+      "xDyd3IjkbXGdmsYq7"
+    )
+    .then((response) => {
+      console.log("Email sent successfully!", response.status, response.text);
+      setAlertVariant("success");
+      setAlertMessage(`Thank you ${formData.name} for your message! I'll get back to you soon.`);
       setShowAlert(true);
-      setFormData(prev => ({
-        ...prev,
-        message: "" // Clear only the message field, keep name for potential future use
-      }));
-      
-      // Hide alert after 5 seconds
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
+    })
+    .catch((error) => {
+      console.error("Failed to send email:", error);
+      setAlertVariant("danger");
+      setAlertMessage("Oops! Something went wrong. Please try again later.");
+      setShowAlert(true);
+    })
+    .finally(() => {
+      setIsSubmitting(false);
       setTimeout(() => setShowAlert(false), 5000);
-    }, 1500);
+    });
   };
 
   return (
@@ -56,13 +122,12 @@ function Contact() {
                 </h3>
                 
                 {showAlert && (
-                  <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-                    Thank you {formData.name} for your message! I'll get back to you soon.
+                  <Alert variant={alertVariant} onClose={() => setShowAlert(false)} dismissible>
+                    {alertMessage}
                   </Alert>
                 )}
                 
-                <Form onSubmit={handleSubmit}>
-                  {/* Rest of the form remains the same */}
+                <Form ref={form} onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" controlId="formName">
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control 
@@ -70,9 +135,12 @@ function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required 
+                      isInvalid={!!errors.name}
                       placeholder="Enter your name" 
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.name}
+                    </Form.Control.Feedback>
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formEmail">
@@ -82,9 +150,12 @@ function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      required 
+                      isInvalid={!!errors.email}
                       placeholder="Enter your email" 
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.email}
+                    </Form.Control.Feedback>
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formMessage">
@@ -94,10 +165,13 @@ function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      required 
+                      isInvalid={!!errors.message}
                       rows={5} 
                       placeholder="Your message here..." 
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.message}
+                    </Form.Control.Feedback>
                   </Form.Group>
 
                   <Button 
