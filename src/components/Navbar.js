@@ -39,6 +39,7 @@ function NavBar() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
+        <meta name="referrer" content="strict-origin-when-cross-origin"/>
         <meta
           name="description"
           content="Personal Portfolio of Dinesh Lohani - A passionate software developer."
