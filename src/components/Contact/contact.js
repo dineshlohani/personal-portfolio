@@ -77,7 +77,7 @@ function Contact() {
     };
 
     emailjs.send(
-      "service_fg210gr",
+      "service_jxzx4gs",
       "template_y631q63",
       templateParams,
       "xDyd3IjkbXGdmsYq7"
