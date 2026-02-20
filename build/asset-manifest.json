@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2bb4e6f7.css",
-    "main.js": "/static/js/main.1d3f6bfe.js",
+    "main.js": "/static/js/main.39900a73.js",
     "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/library.png": "/static/media/library.16325383917d225a4db2.png",
@@ -13,18 +13,21 @@
     "static/media/diabetes.png": "/static/media/diabetes.68ce76eaa242d9294a72.png",
     "static/media/kapada.png": "/static/media/kapada.9f41f28fd93304a05251.png",
     "static/media/about.webp": "/static/media/about.651f314d456da01af98f.webp",
+    "static/media/debugging.png": "/static/media/debugging.30b04a07aab718b092bd.png",
     "static/media/home-bg.webp": "/static/media/home-bg.28fff0e30c0d3f47e8d6.webp",
+    "static/media/contact.jpg": "/static/media/contact.93beeae0f08bc07a4d41.jpg",
+    "static/media/sideProjectsImg.gif": "/static/media/sideProjectsImg.e1a90d54f93c41c6ec7f.gif",
     "static/media/avatar.webp": "/static/media/avatar.fe6047b0ee3eb30a68b8.webp",
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
     "static/media/logo.webp": "/static/media/logo.09aa9371ff8e84984a67.webp",
     "main.2bb4e6f7.css.map": "/static/css/main.2bb4e6f7.css.map",
-    "main.1d3f6bfe.js.map": "/static/js/main.1d3f6bfe.js.map",
+    "main.39900a73.js.map": "/static/js/main.39900a73.js.map",
     "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2bb4e6f7.css",
-    "static/js/main.1d3f6bfe.js"
+    "static/js/main.39900a73.js"
   ]
 }
